@@ -28,5 +28,28 @@ do
 	sed -e "s/^[xX]$/\\\\033[1;31mX\\\\033[00m-RAY/" | \
 	sed -e "s/^[yY]$/\\\\033[1;31mY\\\\033[00mANKEE/" | \
 	sed -e "s/^[zZ]$/\\\\033[1;31mZ\\\\033[00mULU/" \
+	sed -e "s/^\*$/\\\\033[1;31m\*\\\\033[00mASTERISK/" \
+	sed -e "s/^\'$/\\\\033[1;31m\'\\\\033[00mSINGLE QUOTE/" \
+	sed -e "s/^\"$/\\\\033[1;31m\"\\\\033[00mDOUBLE QUOTE/" \
+	sed -e "s/^\^$/\\\\033[1;31m\^\\\\033[00mCIRCUMFLEX/" \
+	sed -e "s/^\_$/\\\\033[1;31m\_\\\\033[00mUNDERSCORE/" \
+	sed -e "s/^\-$/\\\\033[1;31m\-\\\\033[00mHYPHEN/" \
+	sed -e "s/^\&$/\\\\033[1;31m\&\\\\033[00mAMPERSAND/" \
+	sed -e "s/^\%$/\\\\033[1;31m\%\\\\033[00mPERCENT/" \
+	sed -e "s/^\~$/\\\\033[1;31m\~\\\\033[00mTILDE/" \
+	sed -e "s/^\/$/\\\\033[1;31m\/\\\\033[00mSLASH/" \
+	sed -e "s/^\\$/\\\\033[1;31m\\\\\\033[00mBACKSLASH/" \
+	sed -e "s/^\($/\\\\033[1;31m\(\\\\033[00mOPENING PARENTHESIS/" \
+	sed -e "s/^\)$/\\\\033[1;31m\)\\\\033[00mCLOSING PARENTHESIS/" \
+	sed -e "s/^\[$/\\\\033[1;31m\[\\\\033[00mOPENING BRACKET/" \
+	sed -e "s/^\]$/\\\\033[1;31m\]\\\\033[00mCLOSING BRACKET/" \
+	sed -e "s/^\{$/\\\\033[1;31m\{\\\\033[00mOPENING (CURLY)BRACE/" \
+	sed -e "s/^\}$/\\\\033[1;31m\}\\\\033[00mCLOSING (CURLY)BRACE/" \
+	sed -e "s/^\<$/\\\\033[1;31m\<\\\\033[00mOPENING ANGLE BRACKET/" \
+	sed -e "s/^\>$/\\\\033[1;31m\>\\\\033[00mCLOSING ANGLE BRACKET/" \
+	sed -e "s/^\|$/\\\\033[1;31m\|\\\\033[00mVERTICAL BAR/" \
+	sed -e "s/^\#$/\\\\033[1;31m\#\\\\033[00mHASH/" \
+	sed -e "s/^\@$/\\\\033[1;31m\@\\\\033[00mAT-SIGN/" \
+	sed -e "s/^\=$/\\\\033[1;31m\=\\\\033[00mEQUALS/" \
 	)"
 done
