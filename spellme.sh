@@ -1,4 +1,6 @@
 #!/bin/bash
+replacearray=('r1=(aA A LFA)' 'rX=()')
+
 for i in $(seq 1 ${#1})
 do
 	echo -e $( echo -e "$(echo "${1:i-1:1}" | \
