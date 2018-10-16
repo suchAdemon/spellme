@@ -1,65 +1,141 @@
 #!/bin/bash
-replacearray=('r1=(aA A LFA)' 'rX=()')
+num1=("([0-9])" "\\1" "")
+alfanum1=("[aA]" "A" "LFA")
+alfanum2=("[bB]" "B" "RAVO")
+alfanum3=("[cC]" "C" "HARLIE")
+alfanum4=("[dD]" "D" "ELTA")
+alfanum5=("[eE]" "E" "CHO")
+alfanum6=("[fF]" "F" "OXTROT")
+alfanum7=("[gG]" "G" "OLF")
+alfanum8=("[hH]" "H" "OTEL")
+alfanum9=("[iI]" "I" "NDIA")
+alfanum10=("[jJ]" "J" "ULIETT")
+alfanum11=("[kK]" "K" "ILO")
+alfanum12=("[lL]" "L" "IMA")
+alfanum13=("[mM]" "M" "IKE")
+alfanum14=("[nN]" "N" "OVEMBER")
+alfanum15=("[oO]" "O" "SCAR")
+alfanum16=("[pP]" "P" "APA")
+alfanum17=("[qQ]" "Q" "UEBEC")
+alfanum18=("[rR]" "R" "OMEO")
+alfanum19=("[sS]" "S" "IERRA")
+alfanum20=("[tT]" "T" "ANGO")
+alfanum21=("[uU]" "U" "NIFORM")
+alfanum22=("[vV]" "V" "ICTOR")
+alfanum23=("[wW]" "W" "HISKEY")
+alfanum24=("[xX]" "X" "-RAY")
+alfanum25=("[yY]" "Y" "ANKEE")
+alfanum26=("[zZ]" "Z" "ULU")
+
+special1=("\*" "\*" "ASTERISK")
+special2=("\'" "\'" "SINGLE QUOTE")
+special3=("\"" "\"" "DOUBLE QUOTE")
+special4=("\^" "\^" "CIRCUMFLEX")
+special5=("\_" "\_" "UNDERSCORE")
+special6=("\-" "\-" "HYPHEN")
+special7=("\&" "\&" "AMPERSAND")
+special8=("\%" "\%" "PERCENT")
+special9=("\~" "\~" "TILDE")
+special10=("\/" "\/" "SLASH")
+special11=("\\" "\\" "mBACKSLASH")
+special12=("\(" "\(" "OPENING PARENTHESIS")
+special13=("\)" "\)" "CLOSING PARENTHESIS")
+special14=("\[" "\[" "mOPENING BRACKET")
+special15=("\]" "\]" "mCLOSING BRACKET")
+special16=("{" "\{" "OPENING (CURLY)BRACE")
+special17=("\}" "\}" "CLOSING (CURLY)BRACE")
+special18=("\<" "\<" "OPENING ANGLE BRACKET")
+special19=("\>" "\>" "CLOSING ANGLE BRACKET")
+special20=("\#" "\#" "HASH")
+special21=("\@" "\@" "AT-SIGN")
+special22=("\." "\." "DOT")
+special23=("\," "\," "COMMA")
+special24=("\:" "\:" "COLON")
+special25=("\;" "\;" "SEMICOLON")
+special26=("\?" "\?" "QUESTION MARK")
+special27=("\!" "\!" "EXCLAMATION MARK")
+special28=("\+" "\+" "PLUS SIGN")
+special29=("\=" "\=" "EQUALS")
+special30=("\ " "\ " "SPACE")
+special31=("\|" "\|" "PIPE")
+special32=("\\\\\$" "\\\\\$" "DOLAR")
+
+replacearray=(
+    num1[@]
+    alfanum1[@]
+    alfanum2[@]
+    alfanum3[@]
+    alfanum4[@]
+    alfanum5[@]
+    alfanum6[@]
+    alfanum7[@]
+    alfanum8[@]
+    alfanum9[@]
+    alfanum10[@]
+    alfanum11[@]
+    alfanum12[@]
+    alfanum13[@]
+    alfanum14[@]
+    alfanum15[@]
+    alfanum16[@]
+    alfanum17[@]
+    alfanum18[@]
+    alfanum19[@]
+    alfanum20[@]
+    alfanum21[@]
+    alfanum22[@]
+    alfanum23[@]
+    alfanum24[@]
+    alfanum25[@]
+    alfanum26[@]
+    special1[@]
+    special2[@]
+    special3[@]
+    special4[@]
+    special5[@]
+    special6[@]
+    special7[@]
+    special8[@]
+    special9[@]
+    special10[@]
+    special11[@]
+    special12[@]
+    special13[@]
+    special14[@]
+    special15[@]
+    special16[@]
+    special17[@]
+    special18[@]
+    special19[@]
+    special20[@]
+    special21[@]
+    special22[@]
+    special23[@]
+    special24[@]
+    special25[@]
+    special26[@]
+    special27[@]
+    special28[@]
+    special29[@]
+    special30[@]
+    special31[@]
+    special32[@]
+)
+
+countreplacearray=${#replacearray[@]}
 
 for i in $(seq 1 ${#1})
 do
-    echo -e $( echo -e "$(echo "${1:i-1:1}" | \
-    sed -E 's/([0-9])/\\\\033[1;31m\1\\\\033[00m/' | \
-    sed -e "s/^[aA]$/\\\\033[1;31mA\\\\033[00mLFA/" | \
-    sed -e "s/^[bB]$/\\\\033[1;31mB\\\\033[00mRAVO/" | \
-    sed -e "s/^[cC]$/\\\\033[1;31mC\\\\033[00mHARLIE/" | \
-    sed -e "s/^[dD]$/\\\\033[1;31mD\\\\033[00mELTA/" | \
-    sed -e "s/^[eE]$/\\\\033[1;31mE\\\\033[00mCHO/" | \
-    sed -e "s/^[fF]$/\\\\033[1;31mF\\\\033[00mOXTROT/" | \
-    sed -e "s/^[gG]$/\\\\033[1;31mG\\\\033[00mOLF/" | \
-    sed -e "s/^[hH]$/\\\\033[1;31mH\\\\033[00mOTEL/" | \
-    sed -e "s/^[iI]$/\\\\033[1;31mI\\\\033[00mNDIA/" | \
-    sed -e "s/^[jJ]$/\\\\033[1;31mJ\\\\033[00mULIETT/" | \
-    sed -e "s/^[kK]$/\\\\033[1;31mK\\\\033[00mILO/" | \
-    sed -e "s/^[lL]$/\\\\033[1;31mL\\\\033[00mIMA/" | \
-    sed -e "s/^[mM]$/\\\\033[1;31mM\\\\033[00mIKE/" | \
-    sed -e "s/^[nN]$/\\\\033[1;31mN\\\\033[00mOVEMBER/" | \
-    sed -e "s/^[oO]$/\\\\033[1;31mO\\\\033[00mSCAR/" | \
-    sed -e "s/^[pP]$/\\\\033[1;31mP\\\\033[00mAPA/" | \
-    sed -e "s/^[qQ]$/\\\\033[1;31mQ\\\\033[00mUEBEC/" | \
-    sed -e "s/^[rR]$/\\\\033[1;31mR\\\\033[00mOMEO/" | \
-    sed -e "s/^[sS]$/\\\\033[1;31mS\\\\033[00mIERRA/" | \
-    sed -e "s/^[tT]$/\\\\033[1;31mT\\\\033[00mANGO/" | \
-    sed -e "s/^[uU]$/\\\\033[1;31mU\\\\033[00mNIFORM/" | \
-    sed -e "s/^[vV]$/\\\\033[1;31mV\\\\033[00mICTOR/" | \
-    sed -e "s/^[wW]$/\\\\033[1;31mW\\\\033[00mHISKEY/" | \
-    sed -e "s/^[xX]$/\\\\033[1;31mX\\\\033[00m-RAY/" | \
-    sed -e "s/^[yY]$/\\\\033[1;31mY\\\\033[00mANKEE/" | \
-    sed -e "s/^[zZ]$/\\\\033[1;31mZ\\\\033[00mULU/" | \
-    sed -e "s/^\*$/\\\\033[1;31m\*\\\\033[00mASTERISK/" | \
-    sed -e "s/^\'$/\\\\033[1;31m\'\\\\033[00mSINGLE QUOTE/" | \
-    sed -e "s/^\"$/\\\\033[1;31m\"\\\\033[00mDOUBLE QUOTE/" | \
-    sed -e "s/^\^$/\\\\033[1;31m\^\\\\033[00mCIRCUMFLEX/" | \
-    sed -e "s/^\_$/\\\\033[1;31m\_\\\\033[00mUNDERSCORE/" | \
-    sed -e "s/^\-$/\\\\033[1;31m\-\\\\033[00mHYPHEN/" | \
-    sed -e "s/^\&$/\\\\033[1;31m\&\\\\033[00mAMPERSAND/" | \
-    sed -e "s/^\%$/\\\\033[1;31m\%\\\\033[00mPERCENT/" | \
-    sed -e "s/^\~$/\\\\033[1;31m\~\\\\033[00mTILDE/" | \
-    sed -e "s/^\/$/\\\\033[1;31m\/\\\\033[00mSLASH/" | \
-    sed -e "s/^\\$/\\\\033[1;31m\\\\\\033[00mBACKSLASH/" | \
-    sed -e "s/^($/\\\\033[1;31m\(\\\\033[00mOPENING PARENTHESIS/" | \
-    sed -e "s/^)$/\\\\033[1;31m\)\\\\033[00mCLOSING PARENTHESIS/" | \
-    sed -e "s/^\[$/\\\\033[1;31m\[\\\\033[00mOPENING BRACKET/" | \
-    sed -e "s/^\]$/\\\\033[1;31m\]\\\\033[00mCLOSING BRACKET/" | \
-    sed -e "s/^{$/\\\\033[1;31m\{\\\\033[00mOPENING (CURLY)BRACE/" | \
-    sed -e "s/^}$/\\\\033[1;31m\}\\\\033[00mCLOSING (CURLY)BRACE/" | \
-    sed -e "s/^<$/\\\\033[1;31m\<\\\\033[00mOPENING ANGLE BRACKET/" | \
-    sed -e "s/^>$/\\\\033[1;31m\>\\\\033[00mCLOSING ANGLE BRACKET/" | \
-    sed -e "s/^\#$/\\\\033[1;31m\#\\\\033[00mHASH/" | \
-    sed -e "s/^\@$/\\\\033[1;31m\@\\\\033[00mAT-SIGN/" | \
-    sed -e "s/^\.$/\\\\033[1;31m\.\\\\033[00mDOT/" | \
-    sed -e "s/^\,$/\\\\033[1;31m\,\\\\033[00mCOMMA/" | \
-    sed -e "s/^\:$/\\\\033[1;31m\:\\\\033[00mCOLON/" | \
-    sed -e "s/^\;$/\\\\033[1;31m\;\\\\033[00mSEMICOLON/" | \
-    sed -e "s/^\?$/\\\\033[1;31m\?\\\\033[00mQUESTION MARK/" | \
-    sed -e "s/^\!$/\\\\033[1;31m\!\\\\033[00mEXCLAMATION MARK/" | \
-    sed -e "s/^\+$/\\\\033[1;31m\+\\\\033[00mPLUS SIGN/" | \
-    sed -e "s/^\=$/\\\\033[1;31m\=\\\\033[00mEQUALS/" | \
-    sed -e "s/^\ $/\\\\033[1;31m\ \\\\033[00mSPACE/" \
-    )" | sed -e "s/|/\\\\033[1;31m\|\\\\033[00mPIPE/" )
+    getstr="$(echo "${1:i-1:1}")"
+    for ((ii=0; ii<${countreplacearray}; ii++))
+    do
+        chkstr="${!replacearray[ii]:0:1}"
+        echo "${getstr}" | grep -E "^${chkstr}$" -q
+        if [ $? -eq 0 ]
+        then
+            repstr="${!replacearray[ii]:1:1}"
+            fulstr="${!replacearray[ii]:2:1}"
+            echo -e "$(echo "${getstr}" | sed -E "s/^${chkstr}$/\\\\033[1;31m${repstr}\\\\033[00m${fulstr}/")"
+        fi
+    done
 done
