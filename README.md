@@ -8,9 +8,10 @@ The first letter,digent,symbol,... in each line will be colored red. Just run it
 ## Reqirements
 It uses [sed](https://www.gnu.org/software/sed/) and [bashisms](https://en.wikipedia.org/wiki/Bashism) so please make sure that you have them installed. For example with [apt](https://wiki.debian.org/Apt) for [debian](https://www.debian.org/)
 
-## Usage
-![](https://gitea.sons-of-sparda.at/oliver.schraml/spellme/src/branch/master/README/spellme.gif)
+## Demo
+![gif](https://gitea.sons-of-sparda.at/oliver.schraml/spellme/src/branch/master/README/spellme.gif)
 
+## Usage
 ```bash
 /path/to/script/spellme.sh "Schweinebaermaulwurfkatzegoldhueftsteak from suedsteirischem kobe Schaf(1337/42)."
 SIERRA
