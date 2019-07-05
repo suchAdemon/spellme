@@ -96,3 +96,7 @@ FOXTROT
 )CLOSING PARENTHESIS
 .DOT
 ```
+
+## Repositories
+[![Repo on gitea](https://gitea.sons-of-sparda.at/oliver.schraml/spellme.git)](https://gitea.sons-of-sparda.at/oliver.schraml/spellme.git)
+[![Repo on GitHub](https://github.com/suchAdemon/spellme.git)](https://github.com/suchAdemon/spellme.git)
