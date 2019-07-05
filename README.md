@@ -9,7 +9,7 @@ The first letter,digent,symbol,... in each line will be colored red. Just run it
 It uses [sed](https://www.gnu.org/software/sed/) and [bashisms](https://en.wikipedia.org/wiki/Bashism) so please make sure that you have them installed. For example with [apt](https://wiki.debian.org/Apt) for [debian](https://www.debian.org/)
 
 ## Demo
-![gif](https://gitea.sons-of-sparda.at/oliver.schraml/spellme/src/branch/master/README/spellme.gif)
+![gif](https://gitea.sons-of-sparda.at/oliver.schraml/spellme/raw/branch/master/README/spellme.gif)
 
 ## Usage
 ```bash
@@ -98,5 +98,5 @@ FOXTROT
 ```
 
 ## Repositories
-[![Repo on gitea](https://gitea.sons-of-sparda.at/oliver.schraml/spellme.git)](https://gitea.sons-of-sparda.at/oliver.schraml/spellme.git)
-[![Repo on GitHub](https://github.com/suchAdemon/spellme.git)](https://github.com/suchAdemon/spellme.git)
+[Repo on gitea](https://gitea.sons-of-sparda.at/oliver.schraml/spellme.git)
+[Repo on GitHub](https://github.com/suchAdemon/spellme.git)
